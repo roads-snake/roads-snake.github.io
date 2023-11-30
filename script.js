@@ -94,6 +94,8 @@ function collision() {
   return false;
 }
 
+document.getElementById('startButton').addEventListener('click', startGame);
+
 document.addEventListener('keydown', (event) => {
   switch (event.key) {
     case 'ArrowUp':
@@ -119,9 +121,6 @@ document.addEventListener('keydown', (event) => {
         xDirection = 1;
         yDirection = 0;
       }
-      break;
-    case 'Enter':
-      startGame();
       break;
     default:
       break;

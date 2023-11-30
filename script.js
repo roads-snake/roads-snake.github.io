@@ -56,12 +56,13 @@ function drawGame() {
 }
 
 function drawSnake() {
-  snake.forEach(segment => {
-    ctx.fillStyle = 'green';
-    ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
-  });
-}
-
+    snake.forEach(segment => {
+      ctx.fillStyle = 'green';
+      ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
+      ctx.strokeStyle = 'white'; // Set white border color
+      ctx.strokeRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
+    });
+  }
 function increaseSnakeSize() {
   const tail = {x: snake[snake.length - 1].x, y: snake[snake.length - 1].y};
   snake.push(tail);

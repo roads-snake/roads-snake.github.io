@@ -9,6 +9,7 @@ let xDirection = 0;
 let yDirection = 0;
 let gameRunning = false;
 let gameInterval;
+let score = 0;
 
 function startGame() {
   if (gameRunning) return;
@@ -17,6 +18,8 @@ function startGame() {
   generateFood();
   xDirection = 0;
   yDirection = 0;
+  score = 0;
+  document.getElementById('score').innerText = score;
   gameInterval = setInterval(updateGame, 150);
 }
 
@@ -24,7 +27,7 @@ function updateGame() {
   if (collision()) {
     clearInterval(gameInterval);
     gameRunning = false;
-    alert('Game Over!');
+    alert('Game Over! Your score: ' + score);
     return;
   }
 
@@ -32,6 +35,8 @@ function updateGame() {
   if (eatFood()) {
     generateFood();
     increaseSnakeSize();
+    score += 10;
+    document.getElementById('score').innerText = score;
   }
   drawGame();
 }

@@ -5,8 +5,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    //background-color: #f0f0f0;
+    
     background-image: url('./roads-logo.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   
   #gameCanvas {
@@ -36,3 +38,94 @@ body {
     border: 2px solid white;
   }
   
+  .scoreboard {
+    background-color:rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  #startButton {
+    background-color:rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #startButton:hover {
+    cursor:pointer;
+  }
+
+  #startButton:active{
+    border-color: white;
+  }
+
+  .controls {
+    display: none;
+    background-color:rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+
+    display: none;
+    grid-template-columns: repeat(3, 1fr); /* Creates a grid with 3 columns */
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px; /* Adds some space between grid items */
+  }
+
+  @media only screen and (max-width: 800px) {
+    .controls {
+      display: grid;
+    }
+  }
+
+  .controls button {
+    background-color:rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    border: 2px solid black;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 14px ;
+    text-align: center;
+  }
+
+  #upButton {
+    grid-column: 2; 
+    grid-row: 1; 
+    transform: rotate(-90deg);
+    
+  }
+
+  #downButton {
+    grid-column: 2; 
+    grid-row: 3;
+    transform: rotate(90deg); 
+  }
+
+  #leftButton{
+    grid-column: 1; 
+    grid-row: 2; 
+    transform: rotate(180deg); 
+  }
+
+  #rightButton {
+    grid-column: 3; 
+    grid-row: 2; 
+  }

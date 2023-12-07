@@ -5,23 +5,27 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    //background-color: #f0f0f0;
+    background-image: url('./roads-logo.svg');
   }
   
   #gameCanvas {
     width: 600px;
     height: 600px;
-    border: 2px solid #333;
+    border: 2px solid black;
+    border-radius: 10px;
     position: relative;
-    background-image: url('./roads-logo.svg');
+    background-color:rgba(0, 0, 0, 0.6);
+  
   }
   
   .snake {
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: black;
     position: absolute;
     border:2px solid white;
+    border-radius: 5px;
   }
   
   .food {

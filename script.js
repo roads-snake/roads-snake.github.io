@@ -201,29 +201,30 @@ function collision() {
 }
 
 document.getElementById('startButton').addEventListener('click', startGame);
+document.getElementById('startButton').addEventListener('touchstart', startGame);
 
-document.getElementById('upButton').addEventListener('click', () => {
+document.getElementById('upButton').addEventListener('touchstart', () => {
   if (yDirection !== 1) {
     xDirection = 0;
     yDirection = -1;
   }
 });
 
-document.getElementById('downButton').addEventListener('click', () => {
+document.getElementById('downButton').addEventListener('touchstart', () => {
   if (yDirection !== -1) {
     xDirection = 0;
     yDirection = 1;
   }
 });
 
-document.getElementById('leftButton').addEventListener('click', () => {
+document.getElementById('leftButton').addEventListener('touchstart', () => {
   if (xDirection !== 1) {
     xDirection = -1;
     yDirection = 0;
   }
 });
 
-document.getElementById('rightButton').addEventListener('click', () => {
+document.getElementById('rightButton').addEventListener('touchstart', () => {
   if (xDirection !== -1) {
     xDirection = 1;
     yDirection = 0;

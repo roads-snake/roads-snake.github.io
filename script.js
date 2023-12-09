@@ -9,7 +9,7 @@ let xDirection = 0;
 let yDirection = 0;
 let gameRunning = false;
 let gameInterval;
-let score = 0;
+let score;
 
 function startGame() {
   if (gameRunning) return;
@@ -34,7 +34,6 @@ function updateGame() {
   moveSnake();
   if (eatFood()) {
     generateFood();
-    increaseSnakeSize();
     score += 10;
     document.getElementById('score').innerText = score;
   }

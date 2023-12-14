@@ -17,7 +17,7 @@ body {
     border-radius: 10px;
     position: relative;
     background-color:rgba(0, 0, 0, 0.6);
-    margin: 20px;
+    margin-bottom: 20px;
   
   }
   
@@ -40,14 +40,16 @@ body {
   
   .scoreboard {
     background-color:rgba(0, 0, 0, 0.6);
-    padding: 50px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     border: 2px solid black;
+    border-bottom: none;
     color:white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 
@@ -113,6 +115,10 @@ body {
   @media only screen and (hover: none) {
     .controls {
       display: grid;
+    }
+
+    #startButton {
+      margin-top: -400px;
     }
   }
 

@@ -21,12 +21,14 @@ function startGame() {
   score = 0;
   document.getElementById('score').innerText = score;
   gameInterval = setInterval(updateGame, 150);
+  document.getElementById("startButton").style.display = "none";
 }
 
 function updateGame() {
   if (collision()) {
     clearInterval(gameInterval);
     gameRunning = false;
+    document.getElementById("startButton").style.display = "block";
     alert('Game Over! Your score: ' + score);
     return;
   }

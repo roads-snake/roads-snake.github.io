@@ -4,10 +4,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    
-    background-image: url('./roads-logo.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
   }
   
   #gameCanvas {
@@ -16,7 +12,6 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     position: relative;
-    background-color:rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
   
   }

@@ -76,7 +76,6 @@ body {
 
   .controls {
     display: none;
-    background-color:rgba(0, 0, 0, 0.6);
     padding: 50px;
     margin: 20px;
     border-radius: 10px;
@@ -96,7 +95,7 @@ body {
 
 
   .controls button {
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 1);
     border-radius: 10px;
     border: 2px solid black;
     color:white;

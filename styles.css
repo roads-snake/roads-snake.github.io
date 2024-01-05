@@ -101,17 +101,32 @@ body {
     color:white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 20px;
-    padding: 20px 24px ;
+    font-size: 3.75vw;
+    padding: 3.75vw 4.5vw ;
     text-align: center;
   }
 
   @media only screen and (hover: none) {
+    .scoreboard {
+      font-size: 3vw;
+      padding-left: 1.5vw;
+      padding-right: 1.5vw;
+      padding-top: 0.5vw;
+      padding-bottom: 0.5vw;
+    }
+
+    #gameCanvas {
+      width: 100vw;
+      height: 100vw; /* Optionally set height to maintain aspect ratio */
+      max-width: 100%; /* Ensure it doesn't overflow its container */
+    }
+
     .controls {
       display: grid;
     }
 
     #startButton {
+      font-size:5vw;
       margin-top: -400px;
     }
   }
